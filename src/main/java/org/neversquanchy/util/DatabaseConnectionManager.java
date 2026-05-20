@@ -14,12 +14,24 @@ public class DatabaseConnectionManager {
 	private DatabaseConnectionManager() {
 	}
 
-	public static synchronized Connection databaseRequireConnection() {
+	public static synchronized Connection InitializeDatabaseConnection() {
 		try {
 			if (connection == null || DatabaseConnectionManager.connection.isClosed()) {
 				connection = DriverManager.getConnection(url, user, password);
 			}
 		}catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return connection;
+	}
+	
+	public static synchronized Connection databaseRequireConnection() {
+		try {
+			if (connection == null) {
+				connection = DriverManager.getConnection(url, user, password);
+			}
+		}catch (SQLException e) {
+			DatabaseConnectionManager.InitializeDatabaseConnection();
 			e.printStackTrace();
 		}
 		return connection;	
