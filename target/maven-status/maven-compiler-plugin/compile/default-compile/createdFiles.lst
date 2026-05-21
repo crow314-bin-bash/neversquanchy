@@ -1,1 +1,3 @@
-com/crow314/jdbc/Application.class
+org/neversquanchy/core/ApplicationOrchestrator.class
+org/neversquanchy/util/DatabaseConnectionManager.class
+org/neversquanchy/MainLauncher.class

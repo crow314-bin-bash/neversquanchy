@@ -1,1 +1,3 @@
-/home/lucas314/eclipse-workspace/jdbc/src/main/java/com/crow314/jdbc/Application.java
+/home/crow314/eclipse-workspace/neversquanchy/src/main/java/org/neversquanchy/MainLauncher.java
+/home/crow314/eclipse-workspace/neversquanchy/src/main/java/org/neversquanchy/core/ApplicationOrchestrator.java
+/home/crow314/eclipse-workspace/neversquanchy/src/main/java/org/neversquanchy/util/DatabaseConnectionManager.java
